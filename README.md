@@ -1,3 +1,4 @@
 # LeetCode_Break
 
-### Collection of LeetCode questions to ace the coding interview!
+### Collection of LeetCode questions 
+#### personal resporsity to solve the leetcode problems
