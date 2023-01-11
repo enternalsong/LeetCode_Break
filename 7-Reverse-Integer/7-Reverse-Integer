@@ -1,0 +1,23 @@
+import math
+class Solution:
+    def reverse(self, x: int) -> int:
+        num=0
+        pos = True
+        old_list = []
+        if x >=0:
+            pos = True
+        else :
+            x= x*-1
+            pos = False
+        while( int(x/10)>0):
+            old_list.append(x%10)
+            x = int(x/10)
+        old_list.append(x)
+        print(old_list)
+        for i in range(len(old_list)-1,-1,-1):
+            num= old_list[i] * math.pow(10,len(old_list)-1-i)+num
+        print(num)
+        if pos:
+            return int(num)
+        else:
+            return int(num)*-1
