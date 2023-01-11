@@ -1,0 +1,31 @@
+import math
+class Solution:
+    def searchInsert(self,nums, target):
+        up =len(nums)
+        down = 0
+        mid_value = int(math.ceil(len(nums)/2))
+        if target > nums[len(nums)-1]:
+            return len(nums)
+        if target< nums[0]:
+            return 0
+        while mid_value>0:
+            if target == nums[mid_value-1]:
+                return mid_value-1
+            if target>nums[mid_value-1]:
+                down = mid_value
+                diff = len(nums)-down
+                if diff ==1:
+                    return mid_value
+                else:
+                    mid_value = int(math.ceil(diff/2))+ mid_value
+                    
+
+            elif  target < nums[mid_value-1]:
+                up = mid_value
+                diff = mid_value - down
+                if diff ==1:
+                    return mid_value-1
+                else:
+                    mid_value = int(math.ceil(diff/2))+ down
+        return 0
+
