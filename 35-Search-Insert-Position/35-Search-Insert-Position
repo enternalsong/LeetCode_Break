@@ -27,5 +27,5 @@ class Solution:
                     return mid_value-1
                 else:
                     mid_value = int(math.ceil(diff/2))+ down
-        return 0
+ 
 
